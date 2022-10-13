@@ -27,7 +27,7 @@ const options = {
     function startTimer() {
       btn.disabled = true;
       let calc = 1000;
-      timerId = setInterval(() => {
+      const timerId = setInterval(() => {
         const objTime = convertMs(
           selectedDates[0].getTime() - new Date().getTime()
         );
