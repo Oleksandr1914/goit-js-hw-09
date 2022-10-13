@@ -1,0 +1,2 @@
+const t=t=>document.querySelector(t),o=t("[data-start]"),n=t("[data-stop]");o.addEventListener("click",(function(){if(o.classList.contains("rundomColor"))return;o.classList.add("rundomColor");const r=setInterval((function(){t("body").style.backgroundColor=`#${Math.floor(16777215*Math.random()).toString(16)}`}),1e3);n.addEventListener("click",(()=>{clearInterval(r),o.classList.remove("rundomColor")}))}));
+//# sourceMappingURL=01-color-switcher.dd57d74e.js.map
