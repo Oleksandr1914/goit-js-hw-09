@@ -16,3 +16,29 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  color: rgba(105, 105, 105, 0.758);
+  border-color: rgba(130, 125, 125, 0.591);
+}
+
+.isAcctive {
+  color: black;
+  border-color: black;
+}
+
+.value {
+  font-size: 35px;
+  color: black;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  gap: 15px;
+}
