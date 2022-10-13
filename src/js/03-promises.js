@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 const getEl = x => document.querySelector(x);
 
 const delayEl = getEl('[name="delay"]');
@@ -12,10 +14,12 @@ getEl('.form').addEventListener('submit', event => {
   for (let i = 1; i <= amountEl.value; i += 1) {
     createPromise(i, inDelay)
       .then(fulfilled => {
-        console.log(fulfilled);
+        Notiflix.Notify.success(fulfilled);
+        // console.log(fulfilled);
       })
       .catch(rejected => {
-        console.log(rejected);
+        Notiflix.Notify.failure(rejected);
+        // console.log(rejected);
       });
     inDelay += +stepEl.value;
   }
