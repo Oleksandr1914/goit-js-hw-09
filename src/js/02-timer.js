@@ -26,7 +26,7 @@ const options = {
 
     function startTimer() {
       btn.disabled = true;
-      let calc = 1000;
+      let calc = null;
       const timerId = setInterval(() => {
         const objTime = convertMs(
           selectedDates[0].getTime() - new Date().getTime()
@@ -36,7 +36,7 @@ const options = {
         hoursEl.textContent = objTime.hours;
         minutesEl.textContent = objTime.minutes;
         secondsEl.textContent = objTime.seconds;
-        if (calc < 500) {
+        if (calc < 1000) {
           clear();
         }
       }, 1000);
